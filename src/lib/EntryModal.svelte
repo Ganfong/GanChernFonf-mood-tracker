@@ -1,3 +1,7 @@
+<script>
+let emoji = "😐";
+</script>
+
 <div class="modal fade" id="newEntry" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
    	 <div class="modal-content">
@@ -26,6 +30,20 @@
    		 <label for="yearInput">Year</label>
    	 </form>
     </div>
+
+    <div class="row mt-3 text-center">
+    <h5>How was your day?</h5>
+    <h1 class="display-1">{emoji}</h1>
+</div>
+<div class="row px-5">
+    <div class="btn-group mt-2 mb-3" role="group">
+        <!-- Worst Mood -->
+        <!-- Bad Mood -->
+        <!-- Okay Mood -->
+        <!-- Good Mood -->
+        <!-- Best Mood -->
+   </div>
+</div>
 </div>
 
    		 </div>
