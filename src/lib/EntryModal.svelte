@@ -1,5 +1,6 @@
 <script>
 let emoji = "😐";
+let emojiList = {worst: '😭',bad:'🙁',okay:'😐',good: '🙂',best: '😁'}
 </script>
 
 <div class="modal fade" id="newEntry" tabindex="-1">
@@ -38,11 +39,67 @@ let emoji = "😐";
 <div class="row px-5">
     <div class="btn-group mt-2 mb-3" role="group">
         <!-- Worst Mood -->
-        <!-- Bad Mood -->
-        <!-- Okay Mood -->
-        <!-- Good Mood -->
-        <!-- Best Mood -->
+		<input
+    type="radio"
+    class="btn-check"
+    name="moodRadio"
+    id="worst"
+    autocomplete="off"
+    on:click={() => {
+        emoji = emojiList.worst;
+    }}
+/>
+	<label class="btn btn-outline-danger" for="worst">Worst</label> 
+<input 
+	type="radio"
+		class="btn-check"
+		name="moodRadio"
+		id="bad"
+		autocomplete="off"
+		on:click={() => {
+			emoji = emojiList.bad;
+		}}
+	/>
+	<label class="btn btn-outline-warning" for="bad">Bad</label>
+	<input
+	type="radio"
+		class="btn-check"
+		name="moodRadio"
+		id="okay"
+		autocomplete="off"
+		checked
+		on:click={() => {
+			emoji = emojiList.okay;
+		}}
+	/>
+	<label class="btn btn-outline-primary" for="okay">Okay</label>
+	<input
+	type="radio"
+		class="btn-check"
+		name="moodRadio"
+		id="good"
+		autocomplete="off"
+		on:click={() => {
+			emoji = emojiList.good;
+		}}
+	/>
+	<label class="btn btn-outline-info" for="good">Good</label>
+	<input
+	type="radio"
+		class="btn-check"
+		name="moodRadio"
+		id="best"
+		autocomplete="off"
+		on:click={() => {
+			emoji = emojiList.best;
+		}}
+	/>
+	<label class="btn btn-outline-success" for="best">Best</label>
    </div>
+   <div class="form-floating">
+    <textarea class="form-control" id="comment" />
+    <label for="commentTextarea">Comments</label>
+</div>
 </div>
 </div>
 
